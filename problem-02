@@ -1,0 +1,16 @@
+function sendNotification(email){
+    let email2=email.replace(/ /g,"");  
+    let count=email.split("@").length-1  
+    let emailSign=email.includes('@')
+
+    if( count<=1 && email==email2 && emailSign){
+       email=email.split("@"); 
+       let message=email[0]+" sent you an email from " + email[1]    
+       return message;
+
+    }
+    else{
+        return "Invalid Email"
+    }
+}
+console.log(sendNotification('shwon@gmail'))
